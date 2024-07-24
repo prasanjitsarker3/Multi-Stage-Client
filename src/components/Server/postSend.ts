@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { FieldValues } from "react-hook-form";
 
 export const postCreating = async (formData: FieldValues) => {
-  const res = await fetch(`http://localhost:5000/api/v1/post/create`, {
+  const res = await fetch(`https://muilti-back.vercel.app/api/v1/post/create`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

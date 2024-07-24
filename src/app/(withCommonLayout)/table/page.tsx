@@ -4,7 +4,7 @@ import React from "react";
 const TablePage = async () => {
   let tableData;
   try {
-    const res = await fetch("http://localhost:5000/api/v1/post", {
+    const res = await fetch("https://muilti-back.vercel.app/api/v1/post", {
       next: {
         revalidate: 30,
       },

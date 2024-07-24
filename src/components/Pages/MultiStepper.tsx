@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { postCreating } from "../Server/postSend";
 import { toast } from "sonner";
+import { motion } from "framer-motion";
 
 type FormValues = {
   fullName: string;
@@ -106,29 +107,32 @@ const MultiStepper = () => {
           Multi-Stage Mars
         </h1>
         {/* Stepper Button Implement */}
-        <div className=" relative flex justify-between items-center mb-8">
+        <div className=" relative flex justify-between items-center mb-5">
           <div className="absolute top-1/2 left-0 right-0 transform -translate-y-1/2 h-0.5 z-0">
-            <div
+            <motion.div
               className={`absolute left-0 h-full w-1/3 border-2 ${
                 step === 2 || step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-            ></div>
+              transition={{ duration: 0.5 }}
+            ></motion.div>
 
-            <div
+            <motion.div
               className={`absolute left-1/3 h-full w-1/6 border-2 ${
                 step === 2 || step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-            ></div>
-            <div
+              transition={{ duration: 0.5 }}
+            ></motion.div>
+            <motion.div
               className={`absolute right-1/3 h-full w-1/6 border-2 ${
                 step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-            ></div>
-            <div
+              transition={{ duration: 0.5 }}
+            ></motion.div>
+            <motion.div
               className={`absolute right-0 h-full w-1/3 border-2 ${
                 step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-            ></div>
+            ></motion.div>
           </div>
 
           <button
