@@ -47,7 +47,8 @@ To create a new Next.js application and include Tailwind CSS, TypeScript, Framer
  npm run dev
   ```
 
-### Live Link
+# Live Link
 [Live Application] (https://multi-stage.vercel.app)
 [Github] (https://github.com/prasanjitsarker3/Multi-Stage-Client)
+
 `````
