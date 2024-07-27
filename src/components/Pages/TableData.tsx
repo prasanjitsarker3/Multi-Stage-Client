@@ -81,10 +81,7 @@ const TableData = ({ data }: { data: UserData[] }) => {
       <Table isStriped aria-label="Example static collection table">
         <TableHeader columns={columns}>
           {(column) => (
-            <TableColumn
-              key={column.uid}
-              align={column.uid === "actions" ? "center" : "start"}
-            >
+            <TableColumn key={column.uid} className=" w-1/4 text-start">
               {column.name}
             </TableColumn>
           )}

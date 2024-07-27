@@ -113,20 +113,20 @@ const MultiStepper = () => {
               className={`absolute left-0 h-full w-1/3 border-2 ${
                 step === 2 || step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
             ></motion.div>
 
             <motion.div
               className={`absolute left-1/3 h-full w-1/6 border-2 ${
                 step === 2 || step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
             ></motion.div>
             <motion.div
               className={`absolute right-1/3 h-full w-1/6 border-2 ${
                 step === 3 ? "border-blue-500" : "border-gray-600"
               }`}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 1 }}
             ></motion.div>
             <motion.div
               className={`absolute right-0 h-full w-1/3 border-2 ${
@@ -172,7 +172,12 @@ const MultiStepper = () => {
         <form onSubmit={methods.handleSubmit(onSubmit)}>
           {/* Personal Information Section Implement  */}
           {step === 1 && (
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 1 }}
+            >
               <h1 className=" text-[#003249] md:text-3xl text-2xl font-semibold py-3">
                 Personal Information:
               </h1>
@@ -257,11 +262,16 @@ const MultiStepper = () => {
                   )}
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
           {/* ravel Preferences Section Implement  */}
           {step === 2 && (
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 1 }}
+            >
               <h1 className=" text-[#003249] md:text-3xl text-2xl font-semibold py-3">
                 Travel Preferences
               </h1>
@@ -341,11 +351,16 @@ const MultiStepper = () => {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
           {/* Health and Safety Section Implement */}
           {step === 3 && (
-            <div>
+            <motion.div
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -10 }}
+              transition={{ duration: 1 }}
+            >
               <h1 className=" text-[#003249] md:text-3xl text-2xl font-semibold py-3">
                 Health and Safety
               </h1>
@@ -399,7 +414,7 @@ const MultiStepper = () => {
                   />
                 </div>
               </div>
-            </div>
+            </motion.div>
           )}
           {/* Stepper Changing Button Implement */}
           <div className="flex justify-between mt-12">
